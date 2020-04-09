@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" type="text/css" href="icons/css/font-awesome.css"> 
+	<style type="text/css">
+
+		.p-create{
+			width: 50%;
+		}
+		body{
+			background: rgb(8, 70, 158);
+			padding:3px;
+		}
+		.content{
+			margin:3px 3px;
+			border-bottom-right-radius: 10px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			padding: 5px;
+			background: #fff;
+
+
+		}
+
+		.input-group{
+			display: block;
+			margin:20px 10px;
+
+		}
+		.input-group label{
+			display: block;
+			margin-left: 5px
+		}
+		.input-control{
+			border:1px solid #ffee;
+			padding: 10px 10px;
+			background:#ededff;
+			border-radius: 6px;
+			width: 90%
+		}
+		.select{
+			border:none;
+			border-right: 1px solid #ccc;
+			padding: 3px;
+			display: inline;
+			background: none;
+			width: 70%;
+
+		}
+		.select-cover{
+			background:#ededff;
+			border-radius: 6px;
+			border:1px solid #ffee;
+			display: table;
+			padding: 7px;
+			color:#bbb;
+			width: 90%
+		}
+		::placeholder{
+			font-size:15px;
+			color:#bbdd;
+		}
+		.select:focus{
+			outline: none;
+		}
+		.select:focus .dropdown{
+			display: block;
+		}
+
+       .dropdown{
+       	width: 94%;
+       	border:1px solid #eee;
+       	height: 150px;
+       	overflow-y:scroll;
+       	border-radius: 5px;
+       	margin-top: 3px;
+       	display: none;
+       }
+
+		li{
+			list-style-type: none;
+			margin-left: -20px;
+			font-size: 16px;
+			padding: 10px 0px;
+			border-bottom: 1px solid #eee;
+			padding-left: 10px;
+			cursor: pointer;
+		}
+		li:hover{
+			background: blue;
+			color:#fff;
+			border-radius: 3px;
+		}
+		.fa-chevron-down:hover{
+			color:#000;
+		}
+		button{
+			border-bottom-right-radius: 10px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			background: rgb(8, 70, 158);
+			padding:15px 25px;
+			border:none;
+			margin-top: 10px;
+			color: #fff;
+			cursor: pointer;
+		}
+		/*big screen styling*/
+
+@media only screen and (min-width:768px){ 
+	.content{
+			margin:3px 10px;
+			border-bottom-right-radius: 10px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			padding: 20px;
+			background: #fff;
+			margin: 10px 35%;
+
+
+		}
+		.p-create{
+			width: 100%;
+		}
+
+}
+	</style>
+</head>
+<body>
+	<h2 style="text-align: center;color:#fff;">piggyvest</h2>
+	<div class="content">
+		<center>
+		<p style="text-align: center;color:blue;font-size: 20px;" class="p-create">Create a Secure Account</p>
+	</center>
+		<p style="text-align: center;margin-top:-12px;margin-bottom: 25px">welcome to the future of savings & investment</p>
+		<form>
+			<div class="input-group">
+				<label>Full Name</label>
+				<input type="text" name="" class="input-control" placeholder="Full Name">
+			</div>
+			<div class="input-group">
+				<label>Email Address</label>
+				<input type="email" name="" class="input-control" placeholder="Email Address">
+			</div>
+			<div class="input-group">
+				<label>Phone Number</label>
+				<input type="text" name="" class="input-control" placeholder="Phone Number">
+			</div>
+			<div class="input-group">
+				<label>Password</label>
+				<input type="password" name="" class="input-control" placeholder="Password">
+			</div>
+			<div class="input-group">
+				<label>How did you hear about us(optional)</label>
+				<div class="select-cover">
+				<input type="text" name="" class="select" placeholder="Click to select" id="select"> &nbsp;<span class="fa fa-chevron-down" style="font-size: 12px;padding: 10px 15px;cursor: pointer;"></span>
+				
+			</div>
+			<center><span id="msg" style="color:grey"></span></center>
+
+			<div class="dropdown">
+				<ul style="width: 80%">
+					<li class="fb">Facebook</li>
+					<li class="tw">Twitter</li>
+					<li class=ig>Instagram</li>
+					<li class="ref">friend/family/coworker Referral</li>
+					<li class="gg">Google search</li>
+					<li class="gp">Google Playstore</li>
+					<li class="ob">Online Blog</li>
+					<li class="ln">local Newspaper</li>
+					<li class="event">At an event</li>
+					<li class="other">Other</li>
+				</ul>
+			</div>
+
+<center>
+<button>CREATE ACCOUNT</button>
+</center>
+			</div>
+		</form>
+		
+	</div>
+<script src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.fb').click(function(){
+			var text=$('.fb').text();
+			$('#select').val(text);
+		});
+		$('.tw').click(function(){
+			var text=$('.tw').text();
+			$('#select').val(text);
+		});
+		$('.ig').click(function(){
+			var text=$('.ig').text();
+			$('#select').val(text);
+		});
+
+		$('.ref').click(function(){
+			var text=$('.ref').text();
+			$('#select').val(text);
+		});
+		$('.gg').click(function(){
+			var text=$('.gg').text();
+			$('#select').val(text);
+		});
+		$('.gp').click(function(){
+			var text=$('.gp').text();
+			$('#select').val(text);
+		});
+		$('.ob').click(function(){
+			var text=$('.ob').text();
+			$('#select').val(text);
+		});
+		$('.ln').click(function(){
+			var text=$('.ln').text();
+			$('#select').val(text);
+		});
+		$('.event').click(function(){
+			var text=$('.event').text();
+			$('#select').val(text);
+		});
+		$('.other').click(function(){
+			var text=$('.other').text();
+			$('#select').val(text);
+		});
+
+		// display selection box*/
+		$('.fa-chevron-down').click(function(){
+			$('.dropdown').toggle('slow');
+		})
+
+		/*check select input y user*/
+		
+		var options= ["Facebook","Twitter","Instagram","friend/family/coworker Referral","Google search","Google Playstore","Online Blog","local Newspaper","At an event","Other"];
+
+		function checkInput(){
+		$('#select').keyup(function(){
+		$('.dropdown').css('display','block');
+		var input=$('#select').val();
+		if(options.indexOf(input)==-1){
+			$('#msg').html("not in the option");
+			$('button').attr('disabled','disabled');
+			$('button').css('cursor','no-drop');
+			$('#selected').remove();
+			
+		}else{
+			$('#msg').html(" ");
+			var result='<li id="selected" style="background: blue;color:#fff;border-radius:3px;">'+ input +'</li>';
+			$('ul').prepend(result)
+			$('button').attr('disabled','not-disabled');
+			$('button').css('cursor','pointer');
+		}
+	}
+
+	)}
+checkInput();
+
+	})
+</script>
+</body>
+</html>
